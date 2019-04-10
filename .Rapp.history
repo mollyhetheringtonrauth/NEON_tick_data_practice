@@ -1,0 +1,716 @@
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$fd[i] <- loc.i#
+	if (loc.i %in% locations_tax) {#
+		df$tax <- 1#
+	} else {#
+		df$tax <- 0#
+	}#
+	if (loc.i %in% locations_path) {#
+		df$path <- 1#
+	} else {#
+		df$path <- 0#
+	}#
+}
+head(df)
+df
+i <- 1
+loc.i <- locations_fd[i]
+loc.i
+(loc.i %in% locations_tax
+)
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$fd[i] <- loc.i#
+	if (loc.i %in% locations_tax) {#
+		df$tax[i] <- 1#
+	} else {#
+		df$tax[i] <- 0#
+	}#
+	if (loc.i %in% locations_path) {#
+		df$path[i] <- 1#
+	} else {#
+		df$path[i] <- 0#
+	}#
+}#
+#
+head(df)#
+df
+column_names <- c('fd', 'tax', 'path', 'complete')#
+df <- data.frame(matrix(nrow=length(locations_fd), ncol=length(column_names)))#
+colnames(df) <- column_names#
+#
+i <- 1#
+#
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$fd[i] <- loc.i#
+	if (loc.i %in% locations_tax) {#
+		df$tax[i] <- 1#
+	} else {#
+		df$tax[i] <- 0#
+	}#
+	if (loc.i %in% locations_path) {#
+		df$path[i] <- 1#
+	} else {#
+		df$path[i] <- 0#
+	}#
+}#
+#
+head(df)#
+df
+for ( i in 1:nrow(df)) {#
+	if (df$tax [i] == 1 && df$path[i] == 1) {#
+		df$complete[i] <- 1#
+	} else {#
+		df$complete[i] <- 0#
+	}#
+}
+df
+sum(df$complete)
+i <- 1
+loc.i <- locations_fd[i]
+loc.i
+which(tck_fd$collectDate == loc.i)
+which(tck_fd$plotId == loc.i)
+which(tck_fd$plotID == loc.i)
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	df$min_date[i] <- min(tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]#
+	df$max_date[i] <- max(tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]#
+}
+df
+column_names <- c('location', 'min_date', 'max_date')#
+df <- data.frame(matrix(nrow=length(locations_fd), ncol=length(column_names)))#
+colnames(df) <- column_names#
+#
+i <- 1#
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	df$min_date[i] <- min(tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]#
+	df$max_date[i] <- max(tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]#
+}#
+df
+column_names <- c('location', 'min_date', 'max_date')#
+df <- data.frame(matrix(nrow=length(locations_fd), ncol=length(column_names)))#
+colnames(df) <- column_names#
+#
+i <- 1#
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	df$min_date[i] <- range(tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]#
+	#df$max_date[i] <- max(tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]#
+}#
+df
+which(tck_fd$plotID == loc.i
+)
+tck_fd$collectDate[5251, 5259]
+tck_fd$collectDate[c(5251, 5259)]
+dates <- tck_fd$collectDate[c(5251, 5259)]
+range(dates)
+column_names <- c('location', 'min_date', 'max_date')#
+df <- data.frame(matrix(nrow=length(locations_fd), ncol=length(column_names)))#
+colnames(df) <- column_names#
+#
+i <- 1#
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	df$min_date[i] <- range(tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]#
+	#df$max_date[i] <- max(tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]#
+}#
+df
+loc.i
+range(tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]
+tck_fd$plotID == loc.i
+which(tck_fd$plotID == loc.i)
+rows <- which(tck_fd$plotID == loc.i)
+range(tck_fd$collectDate)[rows]
+tck_fd$collectDate[rows]
+range(tck_fd$collectDate)[rows]
+dates.loc.i <- tck_fd$collectDate)[which(tck_fd$plotID == loc.i)
+range(dates.loc.i)
+dates.loc.i <- tck_fd$collectDate)[which(tck_fd$plotID == loc.i)]
+dates.loc.i <- tck_fd$collectDate[which(tck_fd$plotID == loc.i)]
+dates.loc.i
+range(dates.loc.i)
+min(dates.loc.i)
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	dates.loc.i <- tck_fd$collectDate[which(tck_fd$plotID == loc.i)]#
+	df$min_date[i] <- min(dates.loc.i)#
+	df$max_date[i] <- max(dates.loc.i)#
+}#
+df
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	dates.loc.i <- tck_fd$collectDate[which(tck_fd$plotID == loc.i)]#
+	df$min_date[i] <- as.Date(min(dates.loc.i))#
+	df$max_date[i] <- as.Date(max(dates.loc.i))#
+}#
+df
+as.Date(min(dates.loc.i))
+column_names <- c('location', 'min_date', 'max_date')#
+df <- data.frame(matrix(nrow=length(locations_fd), ncol=length(column_names)))#
+colnames(df) <- column_names#
+df$min_date <- as.Date(df$min_date)#
+#
+i <- 1#
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	dates.loc.i <- tck_fd$collectDate[which(tck_fd$plotID == loc.i)]#
+	df$min_date[i] <- as.Date(min(dates.loc.i))#
+	df$max_date[i] <- as.Date(max(dates.loc.i))#
+}#
+df
+column_names <- c('location', 'min_date', 'max_date')#
+df <- data.frame(matrix(nrow=length(locations_fd), ncol=length(column_names)))#
+colnames(df) <- column_names#
+df$min_date <- as.Date(df$min_date)#
+df$max_date <- as.Date(df$max_date)#
+#
+i <- 1#
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	dates.loc.i <- tck_fd$collectDate[which(tck_fd$plotID == loc.i)]#
+	df$min_date[i] <- as.Date(min(dates.loc.i))#
+	df$max_date[i] <- as.Date(max(dates.loc.i))#
+}#
+df
+tck_fd$decimalLatitude[which(tck_fd$plotID == 'ONAQ_008')]
+tck_fd$decimalLongitude[which(tck_fd$plotID == 'ONAQ_008')]
+c(tck_fd$plotID, tck$decimalLatitude) %>% unique
+c(tck_fd$plotID, tck_fd$decimalLatitude) %>% unique
+sites <- tck_fd$siteID %>% unique
+length(sites)
+sites <- tck_tax$siteID %>% unique
+length(sites)
+sites <- tck_path$siteID %>% unique
+length(sites)
+locations_tax
+sites
+require(stringr)
+ss <- locations_tax[1]
+ss
+str_extract(ss, ^[[:upper:]]{4})
+str_extract(ss, ^*{4})
+str_extract(string=ss, patern='^*{4}')
+str_extract(string=ss, '[[:upper:]]')
+str_extract(string=ss, '[[:upper:]]{4}')
+site_tax <- c()
+site_tax <- c()#
+for (i in 1:length(locations_tax)) {#
+	loc.i <- locations_tax[i]#
+	site.i <- str_extract(string=ss, '[[:upper:]]{4}')#
+	site_tax <- c(site_tax, site.i)#
+}
+site_tax %>% unique
+site_tax <- c()#
+for (i in 1:length(locations_tax)) {#
+	loc.i <- locations_tax[i]#
+	site.i <- str_extract(string=loc.i, '[[:upper:]]{4}')#
+	site_tax <- c(site_tax, site.i)#
+}#
+site_tax %>% unique
+site_tax %>% unique %>% length
+# look at how complete fd, tax, and path dataset is across years#
+#
+column_names <- c('location', 'min_date', 'max_date')#
+df <- data.frame(matrix(nrow=length(locations_fd), ncol=length(column_names)))#
+colnames(df) <- column_names#
+df$min_date <- as.Date(df$min_date)#
+df$max_date <- as.Date(df$max_date)#
+#
+i <- 1#
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	dates.loc.i <- tck_fd$collectDate[which(tck_fd$plotID == loc.i)]#
+	df$min_date[i] <- as.Date(min(dates.loc.i))#
+	df$max_date[i] <- as.Date(max(dates.loc.i))#
+}#
+df
+tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)]
+tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1]
+for (i in 1:length(locations)) {#
+	loc.i <- locations[i]#
+	coordiantes[i] <- loc.i#
+	coordinates$lat <- tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$lon <- tck_fd$decimalLongitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+}
+column_names <- c('plotID', 'lat', 'long')#
+coordinates <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(coordinates) <- column_names#
+#
+for (i in 1:length(locations)) {#
+	loc.i <- locations[i]#
+	coordiantes[i] <- loc.i#
+	coordinates$lat <- tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$lon <- tck_fd$decimalLongitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+}
+column_names <- c('plotID', 'lat', 'long')#
+coordinates <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(coordinates) <- column_names#
+#
+for (i in 1:length(locations)) {#
+	loc.i <- locations[i]#
+	coordinates[i] <- loc.i#
+	coordinates$lat <- tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$lon <- tck_fd$decimalLongitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+}
+coordinates
+column_names <- c('plotID', 'lat', 'long')#
+coordinates <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(coordinates) <- column_names#
+#
+for (i in 1:length(locations)) {#
+	loc.i <- locations[i]#
+	coordinates[i] <- loc.i#
+	coordinates$lat[i] <- tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$lon[i] <- tck_fd$decimalLongitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+}
+coordinates
+tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1]
+tck_fd$decimalLongitude[which(tck_fd$plotID == loc.i)][1]
+loc.i
+column_names <- c('plotID', 'lat', 'long')#
+coordinates <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(coordinates) <- column_names
+coordinates
+for (i in 1:length(locations)) {#
+	loc.i <- locations[i]#
+	coordinates$plotID[i] <- loc.i#
+	coordinates$lat[i] <- tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$lon[i] <- tck_fd$decimalLongitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+}
+coordinates
+column_names <- c('plotID', 'lat', 'lon')#
+coordinates <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(coordinates) <- column_names#
+#
+for (i in 1:length(locations)) {#
+	loc.i <- locations[i]#
+	coordinates$plotID[i] <- loc.i#
+	coordinates$lat[i] <- tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$lon[i] <- tck_fd$decimalLongitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+}
+coordinates
+grep(site.i, coordinates$plotID)
+grepl(site.i, coordinates$plotID)
+coordinates$lat[all_loc.i]
+all_loc.i <- grep(site.i, coordinates$plotID)
+coordinates$lat[all_loc.i]
+mean(coordinates$lat[all_loc.i])
+# quick map of all locations#
+locations <- tck_fd$plotID %>% unique#
+sites <- tck_fd$siteID %>% unique#
+length(sites)
+site_tax <- c()#
+for (i in 1:length(locations)) {#
+	loc.i <- locations[i]#
+	site.i <- str_extract(string=loc.i, '[[:upper:]]{4}')#
+	site_tax <- c(site_tax, site.i)#
+}#
+site_tax %>% unique %>% length
+column_names <- c('siteID', 'lat', 'lon')#
+coordinates2 <- data.frame(matrix(nrow=length(sites), ncol=length(column_names)))#
+colnames(coordinates2) <- column_names#
+#
+for (i in 1:length(sites)) {#
+	site.i <- sites[i]#
+	coordiantes2$site <- site.i#
+	all_loc.i <- grep(site.i, coordinates$plotID)#
+	coordinates2$lat <- mean(coordinates$lat[all_loc.i])#
+	coordinates2$lon <- mean(coordinates$lon[all_loc.i])#
+}
+# I will average across the each plot ID within each site to get the coordinates of the site#
+column_names <- c('siteID', 'lat', 'lon')#
+coordinates2 <- data.frame(matrix(nrow=length(sites), ncol=length(column_names)))#
+colnames(coordinates2) <- column_names#
+#
+for (i in 1:length(sites)) {#
+	site.i <- sites[i]#
+	coordinates2$site <- site.i#
+	all_loc.i <- grep(site.i, coordinates$plotID)#
+	coordinates2$lat <- mean(coordinates$lat[all_loc.i])#
+	coordinates2$lon <- mean(coordinates$lon[all_loc.i])#
+}
+coordinates2
+# I will average across the each plot ID within each site to get the coordinates of the site#
+column_names <- c('siteID', 'lat', 'lon')#
+coordinates2 <- data.frame(matrix(nrow=length(sites), ncol=length(column_names)))#
+colnames(coordinates2) <- column_names#
+#
+for (i in 1:length(sites)) {#
+	site.i <- sites[i]#
+	coordinates2$siteID <- site.i#
+	all_loc.i <- grep(site.i, coordinates$plotID)#
+	coordinates2$lat <- mean(coordinates$lat[all_loc.i])#
+	coordinates2$lon <- mean(coordinates$lon[all_loc.i])#
+}
+coordinates2
+# I will average across the each plot ID within each site to get the coordinates of the site#
+column_names <- c('siteID', 'lat', 'lon')#
+coordinates2 <- data.frame(matrix(nrow=length(sites), ncol=length(column_names)))#
+colnames(coordinates2) <- column_names#
+#
+for (i in 1:length(sites)) {#
+	site.i <- sites[i]#
+	coordinates2$siteID[i] <- site.i#
+	all_loc.i <- grep(site.i, coordinates$plotID)#
+	coordinates2$lat[i] <- mean(coordinates$lat[all_loc.i])#
+	coordinates2$lon[i] <- mean(coordinates$lon[all_loc.i])#
+}
+coordinates2
+require(ggplot2)#
+require(ggmap)#
+require(maps)#
+require(mapdata)
+usa <- map_data('usa')
+usa
+plot(usa)
+ggplot() + geom_polygon(data=usa, aes(x=lon, y=lat, group=group)) + coord_fixed(1.3)
+ggplot() + geom_polygon(data=usa, aes(x=long, y=lat, group=group)) + coord_fixed(1.3)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3)
+states <- map_data('states')
+states <- map_data('state')
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=5)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID), color=white)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID), color='white')
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID, x=lon, y=lat), color='white')
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID, x=lon, y=lat), color='white', size=2)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID, x=lon, y=lat), color='blue', size=2)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID, x=lon, y=lat), color='blue', size=2, hjust=-2)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID, x=lon, y=lat), color='blue', size=2, hjust=-1)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID, x=lon, y=lat), color='blue', size=2, hjust=-0.5)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID, x=lon, y=lat), color='red', size=2, hjust=-0.5)
+coordinates
+coordinates2
+# look at how complete fd, tax, and path dataset is across years#
+#
+column_names <- c('location', 'min_date', 'max_date')#
+df <- data.frame(matrix(nrow=length(locations_fd), ncol=length(column_names)))#
+colnames(df) <- column_names#
+df$min_date <- as.Date(df$min_date)#
+df$max_date <- as.Date(df$max_date)#
+#
+i <- 1#
+for (i in 1:length(locations_fd)) {#
+	loc.i <- locations_fd[i]#
+	df$location[i] <- loc.i#
+	dates.loc.i <- tck_fd$collectDate[which(tck_fd$plotID == loc.i)]#
+	df$min_date[i] <- as.Date(min(dates.loc.i))#
+	df$max_date[i] <- as.Date(max(dates.loc.i))#
+}#
+df
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_text(data=coordinates2, aes(label=siteID, x=lon, y=lat), color='red', size=2, jitter)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_label(data=coordinates2, aes(label=siteID, x=lon, y=lat), color='red', size=2, hjust=-0.5)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_label(data=coordinates2, aes(label=siteID, x=lon, y=lat), size=2, hjust=-0.5)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_label(data=coordinates2, aes(label=siteID, x=lon, y=lat), size=2)
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_label(data=coordinates2, aes(label=siteID, x=lon, y=lat), size=2, hjust=-0.3)
+column_names <- c('plotID', 'lat', 'lon', 'elev')#
+coordinates <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(coordinates) <- column_names#
+#
+for (i in 1:length(locations)) {#
+	loc.i <- locations[i]#
+	coordinates$plotID[i] <- loc.i#
+	coordinates$lat[i] <- tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$lon[i] <- tck_fd$decimalLongitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$elev[i] <- tck_fd$elevation[which(tck_fd$plotID == loc.i)][1]#
+}#
+#
+# I will average across the each plot ID within each site to get the coordinates of the site#
+column_names <- c('siteID', 'lat', 'lon', 'elev')#
+coordinates2 <- data.frame(matrix(nrow=length(sites), ncol=length(column_names)))#
+colnames(coordinates2) <- column_names#
+#
+for (i in 1:length(sites)) {#
+	site.i <- sites[i]#
+	coordinates2$siteID[i] <- site.i#
+	all_loc.i <- grep(site.i, coordinates$plotID)#
+	coordinates2$lat[i] <- mean(coordinates$lat[all_loc.i])#
+	coordinates2$lon[i] <- mean(coordinates$lon[all_loc.i])#
+	coordinates2$elev[i] <- mean(coordinates$elev[all_loc.i])#
+}
+coordinates2
+column_names <- c('plotID', 'lat', 'lon', 'elev', 'nlcdClass')#
+coordinates <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(coordinates) <- column_names#
+#
+for (i in 1:length(locations)) {#
+	loc.i <- locations[i]#
+	coordinates$plotID[i] <- loc.i#
+	coordinates$lat[i] <- tck_fd$decimalLatitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$lon[i] <- tck_fd$decimalLongitude[which(tck_fd$plotID == loc.i)][1] # take the first coordinate if the plotId is repeated which it will likely be...#
+	coordinates$elev[i] <- tck_fd$elevation[which(tck_fd$plotID == loc.i)][1]#
+	coordinates$nlcdClass[i] <- tck_fd$nlcdClass[which(tck_fd$plotID == loc.i)][1]#
+}
+coordinates
+which(tck_fd$plotID == 'OSBS_002')
+tck_fd[which(tck_fd$plotID == 'OSBS_002'),]
+tck_fd[which(tck_fd$plotID == 'OSBS_002'), which(colnames(tck_fd) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', 'collectDate', 'sampleID', 'totalSampledArea', 'targetTaxaPresent', 'adultCount', 'nymphCount', 'larvaCount'))]
+subset <- tck_fd[which(tck_fd$plotID == 'OSBS_002'), which(colnames(tck_fd) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', 'collectDate', 'sampleID', 'totalSampledArea', 'targetTaxaPresent', 'adultCount', 'nymphCount', 'larvaCount'))]
+plot(subset, x=subset$collectDate, y=subset$adultCount)
+ggplot(data=subset, aes(x=collectDate, y=adultCount)) + geom_point(color='blue')
+ggplot(data=subset, aes(x=collectDate, y=nymphCount)) + geom_point(color='blue')
+ggplot(data=subset, aes(x=collectDate, y=larvaCount)) + geom_point(color='blue')
+rquire(tidyr)
+require(tidyr)
+subset_long <- gather(subset, keycol=plotID, valuecol = count, gathercols = c(adultCount, nymphCount, larvaCount) factor_key=T)
+subset_long <- gather(subset, keycol=plotID, valuecol = count, gathercols = c(adultCount, nymphCount, larvaCount), factor_key=T)
+subset_long <- gather(subset, keycol=plotID, valuecol = counts, gathercols = c(adultCount, nymphCount, larvaCount), factor_key=T)
+subset_long <- gather(subset, key='counts', value= c(adultCount, nymphCount, larvaCount), factor_key=T)
+subset_long
+subset_long <- gather(subset, lifeStage, countIndividuals , adultCount:larvaCount)
+subset_long
+subset
+ggplot(data=subset_long, aes(x=collectDate, y=adultCount)) + geom_point(color=lifeStage)
+subset_long$stdCount <- subset_long$countIndividuals/totalSampledArea
+subset_long$stdCount <- subset_long$countIndividuals/subset_long$totalSampledArea
+subset_long
+ggplot(data=subset_long, aes(x=collectDate, y=stdCount)) + geom_point(color=lifeStage)
+ggplot(data=subset_long, aes(x=collectDate, y=stdCount)) #+ geom_point(color=lifeStage)
+ggplot(data=subset_long, aes(x=collectDate, y=stdCount)) + geom_point(color='blue')
+ggplot(data=subset_long, aes(x=collectDate, y=stdCount, color=lifeStage)) #+ geom_point(color=)
+ggplot(data=subset_long, aes(x=collectDate, y=stdCount)) + geom_point(aes(color=lifeStage))
+ggplot(data=subset_long, aes(x=collectDate, y=stdCount)) + geom_point(aes(color=lifeStage)) + labs(title= 'OSBS_002', subtitle= 'date range') + xlab('collection Date') + ylab('number individuals/area sampled')
+ggplot() + geom_polygon(data=states, aes(x=long, y=lat, group=group)) + coord_fixed(1.3) + geom_point(data=coordinates2, aes(x=lon, y=lat), color='blue', size=2) + geom_label(data=coordinates2, aes(label=siteID, x=lon, y=lat), size=2, hjust=-0.3)
+subset <- tck_fd[which(tck_fd$plotID == 'YELL_009'), which(colnames(tck_fd) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', 'collectDate', 'sampleID', 'totalSampledArea', 'targetTaxaPresent', 'adultCount', 'nymphCount', 'larvaCount'))]#
+# convert data format so that count becomes a column with adult, nymph and larva as groups#
+subset_long <- gather(subset, lifeStage, countIndividuals , adultCount:larvaCount)#
+subset_long$stdCount <- subset_long$countIndividuals/subset_long$totalSampledArea#
+plot(subset, x=subset$collectDate, y=subset$adultCount)#
+ggplot(data=subset_long, aes(x=collectDate, y=stdCount)) + geom_point(aes(color=lifeStage)) + labs(title= 'OSBS_002', subtitle= 'date range') + xlab('collection Date') + ylab('number individuals/area sampled')
+locations
+subset <- tck_fd[which(tck_fd$plotID == 'TOOL_071'), which(colnames(tck_fd) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', 'collectDate', 'sampleID', 'totalSampledArea', 'targetTaxaPresent', 'adultCount', 'nymphCount', 'larvaCount'))]
+subset_long <- gather(subset, lifeStage, countIndividuals , adultCount:larvaCount)#
+subset_long$stdCount <- subset_long$countIndividuals/subset_long$totalSampledArea#
+plot(subset, x=subset$collectDate, y=subset$adultCount)#
+ggplot(data=subset_long, aes(x=collectDate, y=stdCount)) + geom_point(aes(color=lifeStage)) + labs(title= 'OSBS_002', subtitle= 'date range') + xlab('collection Date') + ylab('number individuals/area sampled')
+tck_fd$collectDate[1:20]
+date1 <- format(as.Date(tck_fd$collectDate[1]), '%Y')
+date1
+tck_fd$collectDate
+tck_fd$collectDate %>% sort
+tck_fd$collectDate %>% sort %>% count
+tck_fd$collectDate %>% unique %>% sort
+format(tck_fd$collectDate, %m) %>% sort
+format(tck_fd$collectDate, '%m') %>% sort
+tck_fd_year_long <- tck_fd[,which(colnames(tck_fd) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', 'collectDate', 'sampleID', 'totalSampledArea', 'targetTaxaPresent', 'adultCount', 'nymphCount', 'larvaCount'))]
+tck_fd_year <- tck_fd[,which(colnames(tck_fd) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', 'collectDate', 'sampleID', 'totalSampledArea', 'targetTaxaPresent', 'adultCount', 'nymphCount', 'larvaCount'))]
+tck_fd_year$year <- format(tck_fd_year$collectDate, '%Y')
+head(tck_fd_year)
+tck_fd_year_wide <- spread(tck_fd_year, key=year, value=targetTaxaPrest)
+tck_fd_year_wide <- spread(tck_fd_year, key=year, value=targetTaxaPresent)
+column_names <- c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', '2014', '2015', '2016', '2017', '2018')#
+tck_fd_year_wide <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(tck_fd_year_wide) <- column_names#
+i <- 1
+plot.i <- locations[i]#
+	subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]#
+	tck_fd_year_wide[i,which(colnmaes(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]subset_plot.i[1, which(colnmaes(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]
+plot.i <- locations[i]#
+	subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]#
+	tck_fd_year_wide[i,which(colnmaes(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnmaes(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]
+tck_fd_year_wide[i,which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]
+tck_fd_year_wide
+column_names <- c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', '2014', '2015', '2016', '2017', '2018')#
+tck_fd_year_wide <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(tck_fd_year_wide) <- column_names#
+i <- 1#
+for(i in 1:length(locations)) {#
+	plot.i <- locations[i]#
+	subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]#
+	tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]#
+	years <- subset_plot.i$year %>% unique#
+	for (k in 1:length(years)) {#
+		subset_plot.i_year.k <- subset_plot.i[which(subset_plot.i == years[k]),]#
+		if ("Y" %in% subset_plot.i_year.k$targetTaxaPresent) {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'Y'#
+		} else {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'N'#
+		}#
+	}	#
+#
+}
+column_names <- c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', '2014', '2015', '2016', '2017', '2018')#
+tck_fd_year_wide <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(tck_fd_year_wide) <- column_names#
+i <- 1#
+for(i in 1:length(locations)) {#
+	plot.i <- locations[i]#
+	subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]#
+	tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]#
+	years <- subset_plot.i$year %>% unique#
+	for (k in 1:length(years)) {#
+		year.k <- years[k]#
+		subset_plot.i_year.k <- subset_plot.i[which(subset_plot.i == year.k),]#
+		if ("Y" %in% subset_plot.i_year.k$targetTaxaPresent) {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'Y'#
+		} else {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'N'#
+		}#
+	}	#
+#
+}
+tck_fd_year_wide
+for(i in 1:length(locations)) {#
+	plot.i <- locations[i]#
+	subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]#
+	tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]#
+	years <- subset_plot.i$year %>% unique#
+	for (k in 1:length(years)) {#
+		year.k <- as.string(years[k])#
+		subset_plot.i_year.k <- subset_plot.i[which(subset_plot.i == year.k),]#
+		if ("Y" %in% subset_plot.i_year.k$targetTaxaPresent) {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'Y'#
+		} else {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'N'#
+		}#
+	}	#
+#
+}
+for(i in 1:length(locations)) {#
+	plot.i <- locations[i]#
+	subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]#
+	tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]#
+	years <- subset_plot.i$year %>% unique#
+	for (k in 1:length(years)) {#
+		year.k <- toString(years[k])#
+		subset_plot.i_year.k <- subset_plot.i[which(subset_plot.i == year.k),]#
+		if ("Y" %in% subset_plot.i_year.k$targetTaxaPresent) {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'Y'#
+		} else {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'N'#
+		}#
+	}	#
+#
+}
+i <- 1
+plot.i <- locations[i]
+plot.i
+subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]
+subset_plot.i
+tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]
+tck_fd_year_wide
+subset_plot.i$year %>% unique
+years <- subset_plot.i$year %>% unique
+k <- 1
+years[k]
+year.k <- years[k]
+subset_plot.i_year.k <- subset_plot.i[which(subset_plot.i == year.k),]
+subset_plot.i_year.k <- subset_plot.i[which(subset_plot.i$year == year.k),]
+subset_plot.i_year.k
+for(i in 1:length(locations)) {#
+	plot.i <- locations[i]#
+	subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]#
+	tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]#
+	years <- subset_plot.i$year %>% unique#
+	#k <- 1#
+	for (k in 1:length(years)) {#
+		year.k <- years[k]#
+		subset_plot.i_year.k <- subset_plot.i[which(subset_plot.i$year == year.k),]#
+		if ("Y" %in% subset_plot.i_year.k$targetTaxaPresent) {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'Y'#
+		} else {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'N'#
+		}#
+	}	#
+#
+}
+tck_fd_year_wide
+colnames(tck_fd)
+head(tck_fd)
+tck_fd_year <- tck_fd[,which(colnames(tck_fd) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', 'collectDate', 'sampleID', 'totalSampledArea', 'targetTaxaPresent', 'adultCount', 'nymphCount', 'larvaCount'))]#
+tck_fd_year$year <- format(tck_fd_year$collectDate, '%Y')#
+head(tck_fd_year)
+column_names <- c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', '2014', '2015', '2016', '2017', '2018')#
+tck_fd_year_wide <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(tck_fd_year_wide) <- column_names#
+i <- 1#
+for(i in 1:length(locations)) {#
+	plot.i <- locations[i]#
+	subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]#
+	tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )]#
+	years <- subset_plot.i$year %>% unique#
+	#k <- 1#
+	for (k in 1:length(years)) {#
+		year.k <- years[k]#
+		subset_plot.i_year.k <- subset_plot.i[which(subset_plot.i$year == year.k),]#
+		if ("Y" %in% subset_plot.i_year.k$targetTaxaPresent) {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'Y'#
+		} else {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'N'#
+		}#
+	}	#
+#
+}
+head(tck_fd_year_wide)
+tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation')]
+i <- 1
+plot.i <- locations[i]
+subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]
+subset_plot.i
+tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation')]
+tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation'))]
+head(tck_fd_year_wide)
+head(tck_fd_year)
+tck_fd_year <- tck_fd[,which(colnames(tck_fd) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'decimalLatitude', 'decimalLongitude', 'elevation', 'collectDate', 'sampleID', 'totalSampledArea', 'targetTaxaPresent', 'adultCount', 'nymphCount', 'larvaCount'))]#
+tck_fd_year$year <- format(tck_fd_year$collectDate, '%Y')#
+head(tck_fd_year)
+column_names <- c('domainID', 'siteID', 'plotID', 'nlcdClass', 'demicalLatitude', 'decimalLongitude', 'elevation', '2014', '2015', '2016', '2017', '2018')#
+tck_fd_year_wide <- data.frame(matrix(nrow=length(locations), ncol=length(column_names)))#
+colnames(tck_fd_year_wide) <- column_names#
+i <- 1#
+for(i in 1:length(locations)) {#
+	plot.i <- locations[i]#
+	subset_plot.i <- tck_fd_year[which(tck_fd_year$plotID == plot.i), ]#
+	tck_fd_year_wide[i, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'decimalLatitude', 'decimalLongitude', 'elevation') )] <- subset_plot.i[1, which(colnames(tck_fd_year) %in% c('domainID', 'siteID', 'plotID', 'nlcdClass', 'decimalLatitude', 'decimalLongitude', 'elevation'))]#
+	years <- subset_plot.i$year %>% unique#
+	#k <- 1#
+	for (k in 1:length(years)) {#
+		year.k <- years[k]#
+		subset_plot.i_year.k <- subset_plot.i[which(subset_plot.i$year == year.k),]#
+		if ("Y" %in% subset_plot.i_year.k$targetTaxaPresent) {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'Y'#
+		} else {#
+			tck_fd_year_wide[i, which(colnames(tck_fd_year_wide) == year.k)] <- 'N'#
+		}#
+	}	#
+#
+}#
+head(tck_fd_year_wide)
+tck_fd_year_wide[is.na(tck_fd_year_wide)] <- 'not sampled'
+head(tck_fd_year_wide)
+install.packages('ggrepel')
+require(ggrepel)
+get_map(location =c(lon= -90, lat=30), zoom=3, source = "google", maptype = "terrain")
+get_map(location =c(lon= -90, lat=30), zoom=3, source = "osm", maptype = "terrain")
+get_map(location =c(lon= -90, lat=30), zoom=3, source = "osm")
+get_map(location =c(lon= -90, lat=30),  source = "osm")
+install.packages('tidyverse')
+require(tidyverse)
+mpg
+head(mpg)
+mpg[23:44,]
+ggplot(data=mpg) +#
+	geom_point(mapping = aes(x=displ, y=hwy)) +#
+	facet_grid(. ~ drv)
+facet_grid(~ drv)
+ggplot(data=mpg) +#
+	geom_point(mapping = aes(x=displ, y=hwy)) +#
+	facet_grid(~ drv)
+ggplot(data=mpg) +#
+	geom_point(mapping = aes(x=displ, y=hwy)) +#
+	facet_grid(drv ~ .)
+vignette('sf1')
